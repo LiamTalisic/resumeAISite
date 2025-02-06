@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Background from "./components/Background";
-import './index.css'
+import Navbar from "./components/Navbar";
 
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
   return (
     <>
       <Background />
+      <Navbar />
     </>
   )
 }

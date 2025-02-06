@@ -40,8 +40,8 @@ const Background = () => {
                             1 0 0 0 0  
                             0 1 0 0 0  
                             0 0 1 0 0  
-                            0 0 0 18 -8" result="goo" />
-                        {/* mult 18, -8 are the most important as they represent alpha channels  */}
+                            0 0 0 20 -10" result="goo" />
+                        {/* Last 2 values are most important, Multiplier */}
 
                         <feBlend in="SourceGraphic" in2="goo" />
 
@@ -57,7 +57,7 @@ const Background = () => {
                 <div className="g4"></div>
                 <div className="g5"></div>
 
-                <div className="interactive"></div>
+                <div className="interactive"/>
             </div>
         </div>
     );
