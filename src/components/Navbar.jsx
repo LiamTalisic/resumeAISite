@@ -22,7 +22,7 @@ function Navbar() {
         return (
             <>
                 <div className="w-full fixed flex justify-center top-5 ">
-                    <div className="w-3/5 h-16 flex justify-between items-center bg-[rgba(120,120,120,0)] backdrop-blur-lg rounded-xl border-solid border-1 border-[#AAAAAA]/50 px-10">
+                    <div className="w-3/5 h-16 flex justify-between items-center bg-[rgba(255,255,255,0.2)] backdrop-blur-lg rounded-xl border-solid border-1 border-[#AAAAAA]/50 px-10">
                     
                         {/* Left side div */}
                         <div className="flex items-center">
@@ -34,7 +34,7 @@ function Navbar() {
                         <div className='flex flex-row '>
                             {/* divs for buttons */}
 
-                            <div className="flex flex-row items-center px-2 md:px-1 sm:hidden md:flex">
+                            <div className="flex flex-row items-center px-1 sm:hidden md:flex">
                                 <a
                                     className="text-black rounded-xl font-semibold cursor-pointer hover:text-purple-400 transition duration-250"
                                     href="https://discord.gg/bpj6je5dnY"
@@ -45,7 +45,7 @@ function Navbar() {
                                 </a>
                             </div>
 
-                            <div className="flex flex-row items-center px-2 md:px-1 sm:hidden md:flex">
+                            <div className="flex flex-row items-center px-1 sm:hidden md:flex">
                                 <a
                                     className="text-black rounded-xl font-semibold cursor-pointer hover:text-purple-400 transition duration-250"
                                     href="https://discord.gg/bpj6je5dnY"
@@ -76,7 +76,7 @@ function Navbar() {
             <>
                 <div className="w-full fixed flex justify-center top-5 ">
 
-                    <div className="w-4/5 h-16 flex justify-between items-center bg-[rgba(120,120,120,0)] backdrop-blur-lg rounded-xl border-solid border-1 border-[#AAAAAA]/50 px-4">
+                    <div className="w-4/5 h-16 flex justify-between items-center bg-[rgba(255,255,255,0.2)] backdrop-blur-lg rounded-xl border-solid border-1 border-[#AAAAAA]/50 px-4">
                         {/* Left side */}
                         <img src="/assets/ResumaiLogo.png" alt="logo" className="w-12 h-12" />
                        
@@ -85,7 +85,7 @@ function Navbar() {
                         <div className='flex flex-row'>
 
                             <a href="https://discord.gg/bpj6je5dnY" target="_blank" rel="noopener noreferrer" >
-                                <div className=" flex flex-row bg-[#32302f]  px-3 py-2 gap-2 rounded-xl hover:bg-purple-400 transition duration-200">
+                                <div className=" flex flex-row bg-[#32302f]  px-3 py-2 gap-2 rounded-xl hover:bg-purple-400 transition duration-350">
                                     <img src="/assets/discord_white.svg" className="h-6 w-6" />
                                     <a className="text-white rounded-xl font-semibold cursor-pointer ">
                                         Discord
