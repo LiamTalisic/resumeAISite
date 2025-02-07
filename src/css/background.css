@@ -17,8 +17,8 @@ body {
   --color4: 0, 26, 255;
   --color5: 204, 0, 255; */
 
-  --color-bg1: rgb(108, 0, 162);
-  --color-bg2: rgb(0, 17, 82);
+  --color-bg1: rgb(236, 221, 243);
+  --color-bg2: rgb(222, 105, 233);
   --color1: 18, 113, 255;
   --color2: 221, 74, 255;
   --color3: 100, 220, 255;
@@ -33,7 +33,7 @@ body {
   --circle-opacity: 0.8;
   --gradient-center: 0.8;
   --gradient-color-stop: 50%;
-  --blur: 30px;
+  --blur: 10px;
 
 
 }
