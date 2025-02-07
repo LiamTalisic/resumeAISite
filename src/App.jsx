@@ -2,9 +2,28 @@ import React, { useState, useRef, useEffect } from "react";
 import Background from "./components/Background";
 import Navbar from "./components/Navbar";
 import IntroBox from "./components/IntroBox";
+import FeatureSteps from "./components/FeatureSteps";
+import Features from "./components/Features";
+import ReverseFeatures from "./components/ReverseFeatures";
 
 
 function App() {
+  const AIDrivenDescription = {
+    intro: "Our AI resume builder utilizes state-of-the-art artificial intelligence to craft resume content tailored to your unique experience and career goals. Say goodbye to writer's block and hello to a resume that highlights your skills and achievements.",
+    features: [
+      { title: "Personalized Content", desc: "🔑 Integrate keywords that resonate with job descriptions and industry standards, enhancing your resume's relevance." },
+      { title: "Proper Formatting", desc: "✅ Ensure your resume is ATS-friendly with automatic formatting adjustments, significantly improving your chances of interview invitations." },
+    ],
+   };
+  
+   const ATSDesc = {
+    intro: "Ensure your resume gets past automated screening systems with our ATS optimization feature. Our AI resume builder analyzes and formats your resume to meet the requirements of applicant tracking systems, increasing your chances of getting noticed by hiring managers.",
+    features: [
+      { title: "Keyword Suggestions", desc: "💡 Generate tailored bullet points and job descriptions that align perfectly with your career objectives, showcasing your key strengths." },
+      { title: "Enhanced Clarity", desc: "✨ Communicate your professional value effectively with clear, concise language that instantly captures the attention of potential employers." },
+      { title: "Another Feature", desc: "🚀 Elevate your resume's impact to stand out; [Feature Description Placeholder]" },
+    ],
+   };
 
   return (
     <>
@@ -25,9 +44,18 @@ function App() {
       </div>
 
       {/* Platforms Section Start */}
-      <div className="w-full flex justify-center items-center bg-[#32302f] py-15 my-5">
-        <div className="w-full h-50 px-5 md:px-0 md:w-3/5">
-          
+      <div className="w-full flex justify-center items-center my-5">
+        <div className="w-full px-5 md:px-0 md:w-3/5 flex justify-center items-cente">
+          <FeatureSteps> </FeatureSteps>
+        </div>
+      </div>
+
+
+      <div className = "w-full flex justify-center items-center my-5 ">
+        <div className = "w-full px-5 md:px-0 md:w-3/5 flex justify-center items-center flex-col gap-5">
+        <Features title = "AI-Driven Content Creation" description={AIDrivenDescription} />
+        <ReverseFeatures title = "ATS Optimized" description={ATSDesc} />
+
         </div>
       </div>
 
