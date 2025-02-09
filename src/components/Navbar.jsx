@@ -59,9 +59,9 @@ function Navbar() {
                             <a href="https://discord.gg/bpj6je5dnY" target="_blank" rel="noopener noreferrer" >
                                 <div className=" flex flex-row bg-[#32302f] w-[131px] py-2 px-5 ml-[10%] mr-[10%] gap-2 rounded-xl hover:bg-purple-400 transition duration-200">
                                     <img src="/assets/discord_white.svg" className="h-6 w-6" />
-                                    <a className="text-white rounded-xl font-semibold cursor-pointer ">
+                                    <p className="text-white rounded-xl font-semibold cursor-pointer ">
                                         Discord
-                                    </a>
+                                    </p>
                                 </div>
                             </a>
                         </div>
