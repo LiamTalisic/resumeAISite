@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* set universal colors and stuff, not sure why @theme and :root both work */
+:root {
+  --background: rgb(243, 248, 255, 1);
+}
+
+body {
+  background-color: var(--background);
+  color: black;
+  font-family: futura, sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+
+::selection {
+  background: #733b73;
+  color: white;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 15s ease infinite;
+  background-size: 200% 100%;
+}
+
+.animated-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.2;
+  background: linear-gradient(90deg, #6c5dd3, #7c6cfb, #9687ff, #6c5dd3);
+  background-size: 200% 100%;
+  animation: gradient-x 15s ease infinite;
+}
