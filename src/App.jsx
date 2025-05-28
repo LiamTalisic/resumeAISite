@@ -13,15 +13,8 @@ function App() {
       <div className="pointer-events-none absolute inset-0 z-0">
         {/* Animated gradient background */}
         <div className="animated-gradient"></div>
-        <svg width="100%" height="100%" className="h-full w-full">
-          <defs>
-            {/* Subtle 32px grid */}
-            <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-              <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#332c49" strokeWidth="0.5" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
+        {/* New div for CSS grid overlay */}
+        <div className="grid-overlay"></div>
       </div>
 
       {/* ───────── Top bar ───────── */}

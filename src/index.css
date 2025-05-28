@@ -2,11 +2,16 @@
 
 /* set universal colors and stuff, not sure why @theme and :root both work */
 :root {
+  --licorice: #0E0617ff;
+  --dark-purple: #170527ff;
+  --licorice-2: #0D0515ff;
+  --pomp-and-power: #7C6992ff;
+  --russian-violet: #2C2146ff;
   --background: rgb(243, 248, 255, 1);
 }
 
 body {
-  background-color: var(--background);
+  background-color: var(--dark-purple);
   color: black;
   font-family: futura, sans-serif;
   align-items: center;
@@ -36,12 +41,35 @@ body {
   background-size: 200% 100%;
 }
 
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes grid-opacity {
+  0%, 100% { opacity: 0.4; } /* Start and end opacity */
+  50% { opacity: 0.1; } /* Lower opacity in the middle */
+}
+
 .animated-gradient {
   position: absolute;
   inset: 0;
   z-index: 0;
-  opacity: 0.2;
-  background: linear-gradient(90deg, #6c5dd3, #7c6cfb, #9687ff, #6c5dd3);
-  background-size: 200% 100%;
-  animation: gradient-x 15s ease infinite;
+  opacity: 1;
+  background: linear-gradient(180deg, var(--licorice), var(--dark-purple), var(--licorice), var(--dark-purple), var(--licorice)); /* Darker gradient colors */
+  background-size: 300% 300%;
+  animation: gradient-animation 25s ease infinite;
+}
+
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image: repeating-linear-gradient(0deg, rgba(124, 105, 146, 0.6) 0px, rgba(124, 105, 146, 0.6) 1px, transparent 1px, transparent 30px),
+                    repeating-linear-gradient(90deg, rgba(124, 105, 146, 0.6) 0px, rgba(124, 105, 146, 0.6) 1px, transparent 1px, transparent 30px);
+  background-size: 30px 30px;
+  mask-image: radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0) 100%);
+  animation: grid-opacity 10s ease-in-out infinite; /* Apply opacity animation */
 }
