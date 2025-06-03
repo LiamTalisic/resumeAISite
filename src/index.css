@@ -1,4 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+
+
+
 
 /* set universal colors and stuff, not sure why @theme and :root both work */
 :root {
@@ -8,6 +15,119 @@
   --pomp-and-power: #7C6992ff;
   --russian-violet: #2C2146ff;
   --background: rgb(243, 248, 255, 1);
+  font-family: "IBM Plex Mono", monospace;
+}
+
+
+
+@layer utilities {
+  .noto-sans-medium {
+    font-family: "Noto Sans", sans-serif;
+    font-style: medium;
+  }
+
+  .noto-sans-regular {
+    font-family: "Noto Sans", sans-serif;
+    font-style: normal;
+  }
+
+  .noto-sans-bold {
+    font-family: "Noto Sans", sans-serif;
+    font-style: bold;
+    font-weight: 600;
+  }
+
+
+
+  .font-plex-medium {
+    font-family: "IBM Plex Mono", monospace;
+    font-style: medium;
+  }
+
+  .font-plex-medium-italic {
+    font-family: "IBM Plex Mono", monospace;
+    font-style: italic;
+  }
+
+  .font-anonymous-pro {
+    font-family: "Anonymous Pro", monospace;
+  }
+
+  .font-anonymous-pro-italic {
+    font-family: "Anonymous Pro", monospace;
+    font-style: italic;
+  }
+
+  .font-anonymous-pro-bold {
+    font-family: "Anonymous Pro", monospace;
+    font-style: bold;
+  }
+
+  .font-titillium-web-extralight {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  .font-titillium-web-light {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .font-titillium-web-regular {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .font-titillium-web-semibold {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .font-titillium-web-bold {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .font-titillium-web-black {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  .font-titillium-web-extralight-italic {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+
+  .font-titillium-web-light-italic {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .font-titillium-web-regular-italic {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .font-titillium-web-semibold-italic {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  .font-titillium-web-bold-italic {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
 }
 
 body {
@@ -23,14 +143,15 @@ body {
   color: white;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 @keyframes gradient-x {
-  0%, 100% {
+
+  0%,
+  100% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
@@ -42,14 +163,32 @@ body {
 }
 
 @keyframes gradient-animation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes grid-opacity {
-  0%, 100% { opacity: 0.4; } /* Start and end opacity */
-  50% { opacity: 0.1; } /* Lower opacity in the middle */
+
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  /* Start and end opacity */
+  50% {
+    opacity: 0.1;
+  }
+
+  /* Lower opacity in the middle */
 }
 
 .animated-gradient {
@@ -57,7 +196,8 @@ body {
   inset: 0;
   z-index: 0;
   opacity: 1;
-  background: linear-gradient(180deg, var(--licorice), var(--dark-purple), var(--licorice), var(--dark-purple), var(--licorice)); /* Darker gradient colors */
+  background: linear-gradient(180deg, var(--licorice), var(--dark-purple), var(--licorice), var(--dark-purple), var(--licorice));
+  /* Darker gradient colors */
   background-size: 300% 300%;
   animation: gradient-animation 25s ease infinite;
 }
@@ -67,9 +207,10 @@ body {
   inset: 0;
   z-index: 1;
   background-image: repeating-linear-gradient(0deg, rgba(124, 105, 146, 0.6) 0px, rgba(124, 105, 146, 0.6) 1px, transparent 1px, transparent 30px),
-                    repeating-linear-gradient(90deg, rgba(124, 105, 146, 0.6) 0px, rgba(124, 105, 146, 0.6) 1px, transparent 1px, transparent 30px);
+    repeating-linear-gradient(90deg, rgba(124, 105, 146, 0.6) 0px, rgba(124, 105, 146, 0.6) 1px, transparent 1px, transparent 30px);
   background-size: 30px 30px;
   mask-image: radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0) 100%);
   -webkit-mask-image: radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0) 100%);
-  animation: grid-opacity 10s ease-in-out infinite; /* Apply opacity animation */
+  animation: grid-opacity 10s ease-in-out infinite;
+  /* Apply opacity animation */
 }
