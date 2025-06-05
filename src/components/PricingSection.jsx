@@ -31,6 +31,7 @@ const plans = [
             { label: "Strong AI Models", available: false },
             { label: "Version Control", available: false },
             { label: "Line-by-Line SmartEdit™", available: false },
+            { label: "Theme & Template Customization*", available: false },
         ],
     },
     {
@@ -179,8 +180,8 @@ const PricingCard = ({ plan, isMonthly }) => {
             </ul>
 
             {/* Get Started */}
-            <button className="w-full bg-[rgba(137,113,220,0.75)] border-[rgb(137,113,220)] border-3 hover:bg-[#9687ff] text-3xl transition duration-200 text-[#FFFFFF] font-thin p-2 rounded-xl ">
-                Get Started
+            <button className="w-full bg-[rgba(137,113,220,0.75)] border-[rgb(137,113,220)] border-3 hover:bg-[#9687ff] text-xl transition duration-200 text-[#FFFFFF] font-thin p-2 rounded-xl ">
+                {plan.name === "Pro" ? "Get Started" : "Start Free Trial"}
             </button>
         </div>
     );
