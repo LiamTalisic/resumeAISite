@@ -7,8 +7,8 @@ import "../index.css";
 const plans = [
     {
         name: "Starter",
-        weeklyRate: 5,
-        monthlyWeeklyRate: 4,
+        weeklyRate: "free",
+        monthlyWeeklyRate: "free",
         billedMonthly: 16,
         savings: 20,
         highlight: false,
@@ -74,7 +74,7 @@ const plans = [
         weeklyFeatures: [
             { label: "Everything in Plus", available: true },
             { label: "75 Résumé + Cover-Letter Pairs", available: true },
-            { label: "Unlimited* Regenerations", available: true }, // This needs clarification, For the pro plan we'll let them regenerate as many times as they want but we will limit the number of regenerations they can do per week to xx
+            { label: "4x more Free Regenerations", available: true }, // This needs clarification, For the pro plan we'll let them regenerate as many times as they want but we will limit the number of regenerations they can do per week to xx
             { label: "Advanced SmartEdit™", available: true },
             { label: "ATS Audits", available: true },
             { label: "Strongest AI Models", available: true },
@@ -85,12 +85,16 @@ const plans = [
         monthlyFeatures: [
             { label: "Everything in Plus", available: true },
             { label: "~300* Résumé + Cover-Letter Pairs", available: true }, // Fair use policy applies here so we should explain it somewhere else
-            { label: "Unlimited* Regenerations", available: true }, // This needs clarification, For the pro plan we'll let them regenerate as many times as they want but we will limit the number of regenerations they can do per week to xx
+            { label: "4x more Free Regenerations", available: true }, // This needs clarification, For the pro plan we'll let them regenerate as many times as they want but we will limit the number of regenerations they can do per week to xx
             { label: "Advanced SmartEdit™", available: true },
             { label: "ATS Audits", available: true },
+            { label: "ATS Scoring", available: true },
             { label: "Strongest AI Models", available: true },
             { label: "Version Control", available: true },
             { label: "Theme & Template Customization*", available: true },
+            { label: "Job Application Tracker", available: true },
+            { label: "1 on 1 interview coaching from Experts", available: true },
+            { label: "Linkedin Profile Imports", available: true },
         ],
     },
 ];

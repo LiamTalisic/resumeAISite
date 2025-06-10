@@ -5,6 +5,7 @@ import LevelUpSection from "./components/LevelUpSection";
 import PricingSection from "./components/PricingSection";
 import LandInterviewsSection from "./components/LandInterviewsSection";
 import BetaTesterSection from "./components/BetaTesterSection";
+import TierComparison from "./components/TierComparison";
 
 function App() {
     return (
@@ -25,6 +26,8 @@ function App() {
                     <DemoSection />
                     <LevelUpSection />
                     <PricingSection />
+                    {/* Tier Comparison */}
+                    <TierComparison />
                     <LandInterviewsSection />
                     <BetaTesterSection />
                 </section>
