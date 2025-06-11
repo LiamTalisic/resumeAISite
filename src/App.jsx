@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import DemoSection from './components/DemoSection';
@@ -5,8 +6,9 @@ import LevelUpSection from './components/LevelUpSection';
 import PricingSection from './components/PricingSection';
 import LandInterviewsSection from './components/LandInterviewsSection';
 import BetaTesterSection from './components/BetaTesterSection';
+import ResumeEditor from './components/ResumeEditor';
 
-function App() {
+function HomePage() {
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-[#181425] to-[#2a2340] text-white font-sans">
       {/* ───────── Grid overlay ───────── */}
@@ -32,6 +34,17 @@ function App() {
         </section>
       </main>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/editor/:resumeId" element={<ResumeEditor />} />
+      </Routes>
+    </Router>
   );
 }
 
