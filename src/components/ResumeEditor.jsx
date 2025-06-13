@@ -142,23 +142,11 @@ const ResumeEditor = () => {
                 if (typeof value === "string" && value.length > 100) {
                     console.log(`Checking history.${field} (length: ${value.length}):`, value.substring(0, 200) + "...");
 
-                    // Check if it contains the expected resume content
-                    if (
-                        value.includes("Jake Ryan") ||
-                        value.includes("JAKE RYAN") ||
-                        value.includes("Southwestern University") ||
-                        value.includes("Experience") ||
-                        value.includes("Projects") ||
-                        value.includes("Technical Skills")
-                    ) {
-                        console.log(`Found resume content in history.${field}!`);
-
-                        if (value.includes("\\documentclass")) {
-                            return convertLatexToText(value);
-                        } else {
-                            // Process as plain text resume
-                            return processPlainTextResume(value);
-                        }
+                    if (value.includes("\\documentclass")) {
+                        return convertLatexToText(value);
+                    } else {
+                        // Process as plain text resume
+                        return processPlainTextResume(value);
                     }
                 }
             }
@@ -171,23 +159,11 @@ const ResumeEditor = () => {
             if (typeof value === "string" && value.length > 100) {
                 console.log(`Checking ${field} (length: ${value.length}):`, value.substring(0, 200) + "...");
 
-                // Check if it contains the expected resume content
-                if (
-                    value.includes("Jake Ryan") ||
-                    value.includes("JAKE RYAN") ||
-                    value.includes("Southwestern University") ||
-                    value.includes("Experience") ||
-                    value.includes("Projects") ||
-                    value.includes("Technical Skills")
-                ) {
-                    console.log(`Found resume content in ${field}!`);
-
-                    if (value.includes("\\documentclass")) {
-                        return convertLatexToText(value);
-                    } else {
-                        // Process as plain text resume
-                        return processPlainTextResume(value);
-                    }
+                if (value.includes("\\documentclass")) {
+                    return convertLatexToText(value);
+                } else {
+                    // Process as plain text resume
+                    return processPlainTextResume(value);
                 }
             }
         }
@@ -196,51 +172,7 @@ const ResumeEditor = () => {
         console.warn("No resume data found, using template. Available data:", Object.keys(resumeData));
         console.warn("Full resumeData for debugging:", JSON.stringify(resumeData, null, 2));
 
-        return `JAKE RYAN
-
-123-456-7890 | jake@su.edu | linkedin.com/in/jake | github.com/jake
-
-EDUCATION
-
-Southwestern University                                                              Georgetown, TX
-Bachelor of Arts in Computer Science, Minor in Business                           Aug. 2018 – May 2021
-
-Blinn College                                                                      Bryan, TX
-Associate's in Liberal Arts                                                        Aug. 2014 – May 2018
-
-EXPERIENCE
-
-Undergraduate Research Assistant                                                   June 2020 – Present
-Texas A&M University                                                               College Station, TX
-• Developed a REST API using FastAPI and PostgreSQL to efficiently store and retrieve data from learning management systems.
-• Designed and implemented a full-stack web application utilizing Flask, React, PostgreSQL, and Docker for analyzing and visualizing GitHub collaboration data.
-• Explored innovative visualization techniques to present GitHub collaboration patterns in educational settings, contributing to data-driven insights for classroom analysis.
-
-Information Technology Support Specialist                                          Sep. 2018 – Present
-Southwestern University                                                            Georgetown, TX
-• Provided technical support and maintenance for campus computers, classroom equipment, and printers, supporting campus-wide IT infrastructure.
-• Coordinated with faculty and staff to set up and troubleshoot campus technology, ensuring seamless operation of educational and administrative activities.
-• Maintained and upgraded 200 printers and related equipment to ensure optimal performance and minimal downtime.
-
-Artificial Intelligence Research Assistant                                         May 2019 – July 2019
-Southwestern University                                                            Georgetown, TX
-• Explored procedural generation methods to create video game dungeons based on The Legend of Zelda, enhancing procedural content generation techniques.
-• Developed a Java-based testing framework to evaluate dungeon generation algorithms, contributing over 50,000 lines of code to an existing codebase via Git.
-• Conducted a human subject study to assess the enjoyment of different dungeon generation techniques, culminating in a comprehensive 8-page research paper and multiple presentations, including a virtual presentation at the World Conference on Computational Intelligence.
-
-PROJECTS
-
-Gitlytics | Flask, React, PostgreSQL, OAuth, Celery, Redis                         June 2020 – Present
-• Developed a full-stack web application with a REST API using Flask and React for visualization of GitHub collaboration data.
-• Implemented GitHub OAuth for secure data access.
-• Utilized Celery and Redis for asynchronous task processing, enhancing application performance.
-
-TECHNICAL SKILLS
-
-Languages: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R
-Frameworks: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI
-Developer Tools: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse
-Libraries: pandas, NumPy, Matplotlib`;
+        return `We fucked up and couldn't find your resume data. Please try again later or contact support. In the meantime, here's a template you can use:`;
     };
 
     const convertLatexToText = (latexContent) => {
@@ -378,56 +310,7 @@ Libraries: pandas, NumPy, Matplotlib`;
             // TODO: Implement actual PDF text extraction
             console.log("Using complete resume template (PDF extraction not yet implemented)");
 
-            return `JAKE RYAN
-
-123-456-7890 | jake@su.edu | linkedin.com/in/jake | github.com/jake
-
-EDUCATION
-
-Southwestern University                                                              Georgetown, TX
-Bachelor of Arts in Computer Science, Minor in Business                           Aug. 2018 – May 2021
-
-Blinn College                                                                      Bryan, TX
-Associate's in Liberal Arts                                                        Aug. 2014 – May 2018
-
-EXPERIENCE
-
-Undergraduate Research Assistant                                                   June 2020 – Present
-Texas A&M University                                                               College Station, TX
-• Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems, demonstrating backend API development skills.
-• Built a full-stack web application with Flask, React, PostgreSQL, and Docker, showcasing proficiency in backend as well as frontend integration.
-• Explored data visualization techniques for GitHub collaboration, aligning with data-driven insights and analysis in backend environments.
-
-Information Technology Support Specialist                                          Sep. 2018 – Present
-Southwestern University                                                            Georgetown, TX
-• Provided technical support by troubleshooting and maintaining campus computer systems, networked printers, and classroom equipment, emphasizing technical troubleshooting skills.
-• Collaborated with faculty and staff to optimize campus technology solutions, demonstrating teamwork and communication skills in a technical environment.
-
-Artificial Intelligence Research Assistant                                         May 2019 – July 2019
-Southwestern University                                                            Georgetown, TX
-• Conducted research to generate video game dungeons using AI techniques, contributing to innovative problem-solving skills.
-• Developed Java-based game testing dungeon generation, showcasing backend programming capabilities.
-• Contributed over 50K lines of code to a collaborative codebase via Git, demonstrating version control expertise and collaborative development experience.
-• Presented research findings and techniques at multiple forums, emphasizing communication skills in technical contexts.
-
-PROJECTS
-
-Gitlytics | Flask, React, PostgreSQL, OAuth, Celery, Redis                         June 2020 – Present
-• Developed a full-stack web application utilizing REST API with Flask and React, emphasizing backend API development.
-• Implemented GitHub OAuth for secure data access and integration, aligning with API security standards.
-• Visualized collaborative data from GitHub to provide insights into team interactions, demonstrating data-driven analysis.
-• Engineered asynchronous task processing with Celery and Redis to improve application performance and scalability.
-
-Artificial Intelligence Research Projects | Java, Git, Research Methodologies     May 2019 – July 2019
-• Led the development of a dungeon generation and testing platform in Java, contributing over 50,000 lines of code within an established codebase.
-• Conducted a human subject study, authored an 8-page academic paper, and presented findings at conferences, emphasizing research communication skills.
-
-TECHNICAL SKILLS
-
-Languages: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R
-Frameworks: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI
-Developer Tools: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse
-Libraries: pandas, NumPy, Matplotlib`;
+            return `We Fucked up`;
         } catch (error) {
             console.error("Error extracting PDF text:", error);
             // Fallback to template
